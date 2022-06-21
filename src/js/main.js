@@ -219,6 +219,8 @@ const makeOrder = event => {
   clearInputs()
   document.querySelector( ".checkout-modal" ).classList.add( "checkout-modal_hidden" )
   document.querySelector( ".button-checkout" ).classList.add( "button-checkout_hidden" )
+  ym( 33645739, 'reachGoal', 'order' )
+  return true
 }
 
 // валидация имени
