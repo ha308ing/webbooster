@@ -1,0 +1,34 @@
+{
+  "title": "Игрушки",
+  "header": "Игрушки",
+  "cards": [
+    {
+      "sku": "sku-0000",
+      "title": "Oriental Metal Chair",
+      "price": "₽3517.00",
+      "qtyMax": 73,
+      "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+1"
+    },
+    {
+      "sku": "sku-0001",
+      "title": "Luxurious Frozen Bike",
+      "price": "₽1803.00",
+      "qtyMax": 66,
+      "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+2"
+    },
+    {
+      "sku": "sku-0002",
+      "title": "Generic Fresh Chair",
+      "price": "₽4126.00",
+      "qtyMax": 120,
+      "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+3"
+    },
+    {
+      "sku": "sku-0003",
+      "title": "Gorgeous Bronze Keyboard",
+      "price": "₽1731.00",
+      "qtyMax": 60,
+      "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+4"
+    }
+  ]
+}
