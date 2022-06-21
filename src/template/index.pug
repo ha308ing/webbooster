@@ -1,0 +1,51 @@
+//- миксин для элемента, если нет данных на входе
+include mixins/fallbackText.pug
+
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="utf-8" )
+    meta( "name"="X-UA-Compatible", content="IE=Edge" )
+    meta( "name"="viewport", content="width=device-width, initial-scale=1" )
+    link( rel="stylesheet", href="./css/main.css" )
+    script( src="./js/main.js" )
+    +fallbackText( "title", title, "Карточки товаров" )
+  body.body
+    +fallbackText( "h1", header, "Карточки товаров" )(class='main-header')
+
+    if !cards
+      span В категории нет товаров
+    ul.cards-list
+      each card in cards
+        //- шаблон для карточки в отдельном файле
+        include includes/card.pug
+
+    //- изначально оформить заказ скрыта, потому что корзина пустая
+    button.button.button-checkout.button-checkout_hidden Оформить заказ
+
+    //- модальное окно с формой и информацией о корзине
+    div.checkout-modal.checkout-modal_hidden
+      div.checkout-modal__window
+        h2.checkout-modal__header Корзина
+        div.checkout-modal__form
+          input(type="text", placeholder="Имя").checkout-modal__form__name
+          input(type="phone", placeholder="Телефон").checkout-modal__form__phone
+        table.checkout-modal__table
+          thead
+            tr
+              th Наименование
+              th Цена
+              th Количество
+          tbody.checkout-modal__table__body
+          tfoot
+            tr( colspan="3" )
+              th.checkout-modal__table__summary
+        button.button.checkout-modal__button Заказать
+        span.checkout-modal__close Закрыть
+
+    //- для уведомления об изменении в корзине, валидации
+    div.toast-message.hidden
+
+
+
+

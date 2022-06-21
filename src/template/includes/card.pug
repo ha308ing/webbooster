@@ -1,0 +1,8 @@
+//- карточки - элементы списка
+li.card.cards-list__item( data-sku=card.sku )
+  h2.card__title= card.title
+  img.card__image( src=card.imageSrc )
+  span.card__price= card.price
+  div.card__controls
+    input.card__qty-input( type="number", min="0", max=card.qtyMax )
+    button.card__button-to-cart Купить

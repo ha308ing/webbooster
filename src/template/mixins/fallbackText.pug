@@ -1,0 +1,6 @@
+//- если текста для элемента нет, использовать текст-заглушку
+mixin fallbackText( elem, text, fallbackText )
+  if text
+    #{elem}(class!=attributes.class)= text
+  else
+    #{elem}(class!=attributes.class)= fallbackText
