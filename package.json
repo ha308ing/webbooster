@@ -1,0 +1,33 @@
+{
+  "name": "webbooster-task_cards",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Передача данных через форму. e-mail уведомление о посуплении закака.",
+  "scripts": {
+    "eslint": "eslint 'src/**/*.js'",
+    "stylelint": "stylelint 'src/css/**/*.{css,scss,sass}'",
+    "generate-data": "node saveData.mjs --title Игрушки --header Игрушки --cards 4"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/register": "latest",
+    "@faker-js/faker": "latest",
+    "browser-sync": "latest",
+    "eslint": "latest",
+    "express": "latest",
+    "gulp-babel": "latest",
+    "gulp-data": "latest",
+    "gulp-pug": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp": "latest",
+    "minireset.css": "latest",
+    "nodemailer": "latest",
+    "pug": "latest",
+    "sass": "latest",
+    "stylelint-config-standard-scss": "latest",
+    "stylelint": "latest",
+    "yargs": "latest"
+  }
+}
