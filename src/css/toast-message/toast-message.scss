@@ -1,0 +1,16 @@
+.toast-message {
+  position: fixed;
+  right: 0;
+  bottom: 5rem;
+  border-radius: 0.5em 0 0 0.5em;
+  box-shadow: 0 3px 6px 2px #fcfcfc;
+  max-width: 35rem;
+  word-wrap: break-word;
+  line-height: 2.3;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.toast-message.hidden {
+  display: none;
+}

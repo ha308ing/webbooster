@@ -1,0 +1,24 @@
+@use "minireset.sass";
+@use "includes/variables";
+@import "cards-list/cards-list";
+@import "card/card";
+@import "main-header/main-header";
+@import "button-checkout/button-checkout";
+@import "checkout-modal/checkout-modal";
+@import "toast-message/toast-message";
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  line-height: 1;
+}
+
+.body {
+  font-family: variables.$font-family;
+  font-size: variables.$font-size;
+}

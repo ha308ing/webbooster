@@ -1,0 +1,10 @@
+@import "__item/cards-list__item";
+
+.cards-list {
+  position: absolute;
+  top: 40vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0 10vw;
+}

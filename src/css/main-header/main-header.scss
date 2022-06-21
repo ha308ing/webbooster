@@ -1,0 +1,17 @@
+@import "_blur/main-header_blur";
+
+.main-header {
+  position: fixed;
+  font-size: 25vh;
+  line-height: 2;
+  right: 2vw;
+  top: 2vh;
+  width: 100vw;
+  text-align: right;
+  transition: filter 0.3s 0.2s ease-in;
+  background-color: #00dbde;
+  background-image: linear-gradient(42deg, #00dbde 0%, #f733f9 33%, #da4b4b 66%, #c53bbd 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}

@@ -1,0 +1,11 @@
+.checkout-modal__close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5rem;
+  font-size: 0.8em;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,17 @@
+@import "_hidden/checkout-modal_hidden";
+@import "__window/checkout-modal__window";
+@import "__header/checkout-modal__header";
+@import "__table/checkout-modal__table";
+@import "__close/checkout-modal__close";
+@import "__button/checkout-modal__button";
+
+.checkout-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3b3b3b52;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
