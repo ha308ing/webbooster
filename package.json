@@ -15,19 +15,15 @@
     "@faker-js/faker": "latest",
     "browser-sync": "latest",
     "eslint": "latest",
-    "express": "latest",
     "gulp-babel": "latest",
-    "gulp-data": "latest",
     "gulp-pug": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp": "latest",
     "minireset.css": "latest",
-    "nodemailer": "latest",
     "pug": "latest",
     "sass": "latest",
     "stylelint-config-standard-scss": "latest",
-    "stylelint": "latest",
-    "yargs": "latest"
+    "stylelint": "latest"
   }
 }
