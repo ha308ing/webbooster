@@ -13,19 +13,20 @@
 
 # Решение
 1. Первый запуск без данных
-```sh
-# ввод значений для данных
-gulp --needData --g_title PageTitle --g_header PageHeader --g_cards NumberOfCards
+    ```sh
+      # ввод значений для данных
+      gulp --needData --g_title PageTitle --g_header PageHeader --g_cards NumberOfCards
 
-# стандартные значения
-gulp --needData
+      # стандартные значения
+      gulp --needData
 
-# только данные [--g_title, --g_header, --g_cards]
-gulp gen-data
-```
-1. Запуск для отладки
-`gulp`
+      # только данные [--g_title, --g_header, --g_cards]
+      gulp gen-data
+    ```
 
-1. Запуск для загрузки на сервер. PHP-cкрипт `script` для email разместить в корне хоста
-`gulp --production`
+1. Запуск для отладки  
+  `gulp`
+
+1. Запуск для загрузки на сервер. PHP-cкрипт `script` для email разместить в корне хоста  
+  `gulp --production`
 
