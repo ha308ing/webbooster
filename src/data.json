@@ -4,30 +4,30 @@
   "cards": [
     {
       "sku": "sku-0000",
-      "title": "Ergonomic Concrete Keyboard",
-      "price": "₽7249.00",
-      "qtyMax": 41,
+      "title": "Handcrafted Rubber Bike",
+      "price": "₽5467.00",
+      "qtyMax": 48,
       "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+1"
     },
     {
       "sku": "sku-0001",
-      "title": "Handcrafted Cotton Table",
-      "price": "₽734.00",
-      "qtyMax": 74,
+      "title": "Unbranded Plastic Gloves",
+      "price": "₽4648.00",
+      "qtyMax": 47,
       "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+2"
     },
     {
       "sku": "sku-0002",
-      "title": "Incredible Frozen Shoes",
-      "price": "₽2403.00",
-      "qtyMax": 162,
+      "title": "Awesome Frozen Hat",
+      "price": "₽7282.00",
+      "qtyMax": 98,
       "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+3"
     },
     {
       "sku": "sku-0003",
-      "title": "Refined Bronze Cheese",
-      "price": "₽5338.00",
-      "qtyMax": 31,
+      "title": "Tasty Plastic Pizza",
+      "price": "₽5883.00",
+      "qtyMax": 70,
       "imageSrc": "http://via.placeholder.com/320/e3f2ff/9b4c4c?text=Изображение+4"
     }
   ]
