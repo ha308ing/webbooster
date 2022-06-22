@@ -12,10 +12,20 @@
 5. Готовый пример необходимо разместить на свой хостинг и прислать ссылку, плюсом будет ссылка на гит.
 
 # Решение
-1. Сгенерировать данные ( faker, json )
-    ```sh
-      npm run generate-data -- --title Игрушки --header Игрушки --cards 15
-    ```
-2. Использовать шаблоны для категории и карточек ( pug )
-3. PHP-cкрипт для email в корень хостинга
+1. Первый запуск без данных
+```sh
+# ввод значений для данных
+gulp --needData --g_title PageTitle --g_header PageHeader --g_cards NumberOfCards
+
+# стандартные значения
+gulp --needData
+
+# только данные [--g_title, --g_header, --g_cards]
+gulp gen-data
+```
+1. Запуск для отладки
+`gulp`
+
+1. Запуск для загрузки на сервер. PHP-cкрипт `script` для email разместить в корне хоста
+`gulp --production`
 
