@@ -6,7 +6,7 @@
   "scripts": {
     "eslint": "eslint 'src/**/*.js'",
     "stylelint": "stylelint 'src/css/**/*.{css,scss,sass}'",
-    "generate-data": "node saveData.mjs --title Игрушки --header Игрушки --cards 4"
+    "generate-data": "node saveData.mjs"
   },
   "devDependencies": {
     "@babel/core": "latest",
@@ -17,6 +17,7 @@
     "eslint": "latest",
     "gulp-babel": "latest",
     "gulp-pug": "latest",
+    "gulp-data": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp": "latest",
@@ -24,6 +25,7 @@
     "pug": "latest",
     "sass": "latest",
     "stylelint-config-standard-scss": "latest",
-    "stylelint": "latest"
+    "stylelint": "latest",
+    "yargs": "latest"
   }
 }

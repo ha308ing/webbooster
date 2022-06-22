@@ -5,18 +5,37 @@ import dartSass from "sass"
 import gulpSass from "gulp-sass"
 import babel from "gulp-babel"
 import sourcemaps from "gulp-sourcemaps"
-import data from "./data.json"
+import data from "gulp-data"
 import browser from "browser-sync"
+import { argv as yargs } from "yargs"
+import generateData from "./generateData"
+import fs from "fs"
+import path from "path"
 
 const sass = gulpSass( dartSass )
 
-const server = cb => {
-  browser.init( { server: "dist" } )
-  cb()
-}
+// disable watching and server
+const isProduction = false || yargs.prod || yargs.production
+
+// need to generate data
+const needData = false || yargs.needData
+
+task( "server", () =>
+  browser.init( { server: "dist" } ) )
+
+task( "gen-data", async ( cb ) => {
+  try {
+    let { g_title, g_header, g_cards } = yargs
+    const d = await generateData( g_title || "Default title", g_header || "Default header", g_cards || 4 )
+    fs.writeFile( "./src/data.json", JSON.stringify( d, null, 2 ), cb )
+  }
+  catch ( error ) {
+    console.log( `Error in generating data: ${ error }` )
+  }
+} )
 
 task( "copy-data", () =>
-  src( "data.json" ).
+  src( "src/data.json" ).
     pipe( dest( "dist" ) ) )
 
 task( "copy-php", () =>
@@ -27,7 +46,11 @@ task( "copy", parallel( "copy-data", "copy-php" ) )
 
 task( "pug", () =>
   src( "src/template/*.pug" ).
-    pipe( pug( { locals: data } ) ).
+    pipe( data( function () {
+      const dataFile = path.join( __dirname, "src/data.json" )
+      return JSON.parse( fs.readFileSync( dataFile ) )
+    } ) ).
+    pipe( pug( { data } ) ).
     pipe( dest( "dist" ) ) )
 
 task( "babel", () =>
@@ -48,4 +71,16 @@ task( "watch", () => {
   watch( "src/css" ).on( "all", series( "sass", browser.reload ) )
 } )
 
-task( "default", series( "copy", parallel( "pug", "babel", "sass" ), server, "watch" ) )
+// parallel task for pug, babel, sass
+task( "pbs", parallel( "pug", "babel", "sass" ) )
+
+const tasks = () => {
+  let tasks = []
+  if ( needData ) tasks = tasks.concat( "gen-data" )
+  tasks = tasks.concat( "pbs" )
+  tasks = tasks.concat( isProduction ? "copy" : [ "server", "watch" ] )
+  console.log( tasks )
+  return tasks
+}
+
+task( "default", series( tasks() ) )
